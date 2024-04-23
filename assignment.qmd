@@ -1,0 +1,56 @@
+---
+title: "Assignment 2"
+Name and id of the authors: Mannan Syed(212411), Meriton Tahiri (212398), Oskar Briceno Melinton (21354)
+bibliography: ref.bib
+---
+abstract: |
+  This article evaluates novel approaches to do
+  some really important things.
+---
+
+```{r, echo=F, messages=F, warnings=F}
+source('rscript.R')
+```
+
+
+
+# Introduction
+We are going to take a look at a data analysis assignment.we are going to look at different factors and see how they affect the price of a car.
+# Chapter A
+We can separate them as b2 for age, b3 for model, b4 for transmission, b5 for mileage and b6 for fuel type. If we are describing b3 we can say that if b3 increases with one then b1(price) increases with 129,750 if everything else stays the same. We can describe the rest of the coefficient using the same method.
+# Chapter B
+2) Comapred to the model in task B we can se that the age of the car has more effect on the price this is probably caused by the fact that now we have many more variables that effect the scale of how each variable effects the price.¨
+# Chapter C
+3) The final model is more accurate because it contains multiple different values that effect the price of the car instead of just using age. Because as we know the price of the car is not just chosen by the age but many different factors and that’s why i think this is a better model.
+
+
+According to [@knuth84]
+
+
+# Conclusions
+We see that the final model is better suited for calculating the estimated price of the car. because it includes multiple different factors.
+# References
+
+# appendix
+```{Model 2}
+Model 2: OLS, using observations 1-41
+Dependent variable: price
+
+ 	Coefficient	Std. Error	t-ratio	p-value	
+const	26467,2	4612,99	5,738	<0,0001	***
+age	−2775,40	569,005	−4,878	<0,0001	***
+model	129,750	292,802	0,4431	0,6604	
+transmission	−1300,10	1035,10	−1,256	0,2174	
+mileage	−0,0720754	0,0381195	−1,891	0,0670	*
+fuelType	8566,78	1595,05	5,371	<0,0001	***
+
+Mean dependent var	 15849,34		S.D. dependent var	 6500,945
+Sum squared resid	 5,68e+08		S.E. of regression	 4027,254
+R-squared	 0,664206		Adjusted R-squared	 0,616235
+F(5, 35)	 13,84611		P-value(F)	 1,75e-07
+Log-likelihood	−395,2673		Akaike criterion	 802,5347
+Schwarz criterion	 812,8161		Hannan-Quinn	 806,2786
+}
+
+
+
