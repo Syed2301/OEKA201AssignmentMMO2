@@ -11,7 +11,7 @@
 
 ## Confirmation
 ### Part 1
-`<I will write my confirmed message here> `Du har tidligere confirmet part 1 men, jeg klarte å pushe change fra tidligere versjon av readMe som gjorde at den ble borte.
+`<I will write my confirmed message here> `Du har tidligere confirmet part 1 men, det var på den forrige repository for assignement 1. Nettsiden er laget i en annen repository som vi inviterte deg til. I denne repository har vi prøvd å gjøre de andre oppgavene i assignment 2.
 ### Part 2
 `<I will write my confirmed message here> `
 
