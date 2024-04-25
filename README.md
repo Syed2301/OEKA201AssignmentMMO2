@@ -11,7 +11,7 @@
 
 ## Confirmation
 ### Part 1
-`<I will write my confirmed message here> `Du har tidligere confirmet part 1 men, det var på den forrige repository for assignement 1. Nettsiden er laget i en annen repository som vi inviterte deg til. I denne repository har vi prøvd å gjøre de andre oppgavene i assignment 2.
+Jørn I. Halvorsen (confirmed)
 ### Part 2
 `<I will write my confirmed message here> `
 
