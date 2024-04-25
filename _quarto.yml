@@ -1,0 +1,29 @@
+project:
+  type: website
+  output-dir: submitted
+
+website:
+  title: "OEKA201AssignmentJIHABC"
+  navbar:
+    left:
+      - href: index.qmd
+
+format:
+  html:
+    toc: true
+# You will need to add more stuff here
+  pdf:
+    toc: true
+# You will need to add more stuff here
+  docx:
+    toc: true
+# You will need to add more stuff here
+  epub:
+    toc: true
+# You will need to add more stuff here
+
+bibliography: ref.bib
+
+
+
+
