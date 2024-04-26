@@ -13,7 +13,11 @@
 ### Part 1
 Jørn I. Halvorsen (confirmed)
 ### Part 2
-`<I will write my confirmed message here> `
+Technically fine now (I have also made some adjustment).
+Remaining task:
+  - More output from  the R script should be embedded into the text [link](https://github.com/joernihHIOF/OEKA201SandboxJIH/blob/main/assignment/assignmentQandA.R)
+
+Note: In order for the word counter to work (the function is located under the R folder), you need to execute (1) build and (2) install in RStudio before running assignment.qmd.
 
 
 

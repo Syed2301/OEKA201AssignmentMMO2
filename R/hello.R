@@ -16,3 +16,19 @@
 hello <- function() {
   print("Hello, world!")
 }
+### Funksjon for å telle ord i Quarto-dokument
+cwordquarto <- function(filename="assignment.qmd") {
+  tryCatch({
+    content <- readLines(filename, warn = FALSE)
+    content <- paste(content, collapse = " ")
+    words <- strsplit(content, "\\s+")
+    word_count <- length(unlist(words))
+    return(word_count)
+  }, error = function(e) {
+    message(paste("En feil oppstod:", e))
+    return(-1)
+  })
+}
+
+
+

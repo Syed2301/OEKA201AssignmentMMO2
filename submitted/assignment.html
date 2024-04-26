@@ -2,12 +2,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.540">
+<meta name="generator" content="quarto-1.5.28">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>OEKA201AssignmentJIHABC - Assignment 2</title>
+<title>OEKA201AssignmentMMO2 – Assignment 2</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -121,6 +121,35 @@ div.csl-indent {
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 </head>
 
@@ -132,7 +161,7 @@ div.csl-indent {
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
     <a class="navbar-brand" href="./index.html">
-    <span class="navbar-title">OEKA201AssignmentJIHABC</span>
+    <span class="navbar-title">OEKA201AssignmentMMO2</span>
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
@@ -143,11 +172,11 @@ div.csl-indent {
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
     <a class="nav-link" href="./index.html"> 
-<span class="menu-text">ABC</span></a>
+<span class="menu-text">Assignment 2</span></a>
   </li>  
 </ul>
           </div> <!-- /navcollapse -->
-          <div class="quarto-navbar-tools">
+            <div class="quarto-navbar-tools">
 </div>
       </div> <!-- /container-fluid -->
     </nav>
@@ -161,13 +190,25 @@ div.csl-indent {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction">Introduction</a></li>
+  <li><a href="#adjust-the-output-text-below-and-insert-at-a-appropriate-place-in-the-document-below" id="toc-adjust-the-output-text-below-and-insert-at-a-appropriate-place-in-the-document-below" class="nav-link active" data-scroll-target="#adjust-the-output-text-below-and-insert-at-a-appropriate-place-in-the-document-below">Adjust the output text below and insert at a appropriate place in the document below</a></li>
+  <li><a href="#data" id="toc-data" class="nav-link" data-scroll-target="#data">Data</a></li>
+  <li><a href="#results" id="toc-results" class="nav-link" data-scroll-target="#results">Results</a>
+  <ul class="collapse">
+  <li><a href="#estimations" id="toc-estimations" class="nav-link" data-scroll-target="#estimations">Estimations</a></li>
+  <li><a href="#predictions" id="toc-predictions" class="nav-link" data-scroll-target="#predictions">Predictions</a></li>
+  </ul></li>
+  <li><a href="#inroduction" id="toc-inroduction" class="nav-link" data-scroll-target="#inroduction">Inroduction</a></li>
+  <li><a href="#data-1" id="toc-data-1" class="nav-link" data-scroll-target="#data-1">Data</a></li>
+  <li><a href="#results-1" id="toc-results-1" class="nav-link" data-scroll-target="#results-1">Results</a>
+  <ul class="collapse">
+  <li><a href="#estimations-1" id="toc-estimations-1" class="nav-link" data-scroll-target="#estimations-1">Estimations</a></li>
   <li><a href="#chapter-a" id="toc-chapter-a" class="nav-link" data-scroll-target="#chapter-a">Chapter A</a></li>
   <li><a href="#chapter-b" id="toc-chapter-b" class="nav-link" data-scroll-target="#chapter-b">Chapter B</a></li>
   <li><a href="#chapter-c" id="toc-chapter-c" class="nav-link" data-scroll-target="#chapter-c">Chapter C</a></li>
+  <li><a href="#predictions-1" id="toc-predictions-1" class="nav-link" data-scroll-target="#predictions-1">Predictions</a></li>
+  </ul></li>
   <li><a href="#conclusions" id="toc-conclusions" class="nav-link" data-scroll-target="#conclusions">Conclusions</a></li>
   <li><a href="#appendix" id="toc-appendix" class="nav-link" data-scroll-target="#appendix">Appendix</a></li>
-  <li><a href="#appendix-1" id="toc-appendix-1" class="nav-link" data-scroll-target="#appendix-1">Appendix</a></li>
   </ul>
 <div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="assignment.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li><li><a href="assignment.docx"><i class="bi bi-file-word"></i>MS Word</a></li><li><a href="assignment.epub"><i class="bi bi-file"></i>ePub</a></li></ul></div></nav>
     </div>
@@ -203,55 +244,206 @@ div.csl-indent {
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "R commands read into memory"</code></pre>
 </div>
-<div class="cell-output cell-output-stderr">
-<pre><code>
-Attaching package: 'dplyr'</code></pre>
 </div>
-<div class="cell-output cell-output-stderr">
-<pre><code>The following objects are masked from 'package:stats':
-
-    filter, lag</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>The following objects are masked from 'package:base':
-
-    intersect, setdiff, setequal, union</code></pre>
-</div>
-</div>
-<section id="introduction" class="level1">
-<h1>Introduction</h1>
-<p>We are going to take a look at a data analysis assignment.we are going to look at different factors and see how they affect the price of a car.</p>
+<section id="adjust-the-output-text-below-and-insert-at-a-appropriate-place-in-the-document-below" class="level1">
+<h1>Adjust the output text below and insert at a appropriate place in the document below</h1>
+<p>Would like to refer to <span class="citation" data-cites="wickham2023r">(<a href="#ref-wickham2023r" role="doc-biblioref">Wickham, Çetinkaya-Rundel, and Grolemund 2023</a>)</span> and <span class="citation" data-cites="bjornar">(<a href="#ref-bjornar" role="doc-biblioref">Karlsen Kivedal 2023</a>)</span></p>
+<p>Model 1: One variable and linear <span class="math display">\[price_i=\beta_0+\beta_1 mileage_i + u_i\]</span></p>
+<p>Model 2: Two variables and non-linear <span class="math display">\[price_i=\beta_0+\beta_1 mileage_i+ \beta_2 mileage_i^2 + u_i\]</span></p>
 </section>
-<section id="chapter-a" class="level1">
-<h1>Chapter A</h1>
+<section id="data" class="level1">
+<h1>Data</h1>
+<p>summary statistics</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>descsum </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>     model            price        transmission    mileage      
+ Min.   : 1.000   Min.   : 6038   Min.   :1     Min.   :    50  
+ 1st Qu.: 2.000   1st Qu.:10950   1st Qu.:2     1st Qu.:  6345  
+ Median : 4.000   Median :15499   Median :2     Median : 15096  
+ Mean   : 4.317   Mean   :15849   Mean   :2     Mean   : 21975  
+ 3rd Qu.: 5.000   3rd Qu.:17998   3rd Qu.:2     3rd Qu.: 31558  
+ Max.   :11.000   Max.   :39923   Max.   :3     Max.   :130400  
+    fuelType          age       
+ Min.   :1.000   Min.   :4.000  
+ 1st Qu.:1.000   1st Qu.:5.000  
+ Median :1.000   Median :7.000  
+ Mean   :1.317   Mean   :6.585  
+ 3rd Qu.:2.000   3rd Qu.:8.000  
+ Max.   :2.000   Max.   :9.000  </code></pre>
+</div>
+</div>
+<p>correlation matrix</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">kable</span>(desccor)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<table class="table table-sm table-striped small">
+<colgroup>
+<col style="width: 16%">
+<col style="width: 13%">
+<col style="width: 13%">
+<col style="width: 16%">
+<col style="width: 13%">
+<col style="width: 13%">
+<col style="width: 13%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;"></th>
+<th style="text-align: right;">model</th>
+<th style="text-align: right;">price</th>
+<th style="text-align: right;">transmission</th>
+<th style="text-align: right;">mileage</th>
+<th style="text-align: right;">fuelType</th>
+<th style="text-align: right;">age</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">model</td>
+<td style="text-align: right;">1.0000000</td>
+<td style="text-align: right;">0.2541991</td>
+<td style="text-align: right;">-0.1549412</td>
+<td style="text-align: right;">-0.0641297</td>
+<td style="text-align: right;">0.2282952</td>
+<td style="text-align: right;">-0.0485343</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">price</td>
+<td style="text-align: right;">0.2541991</td>
+<td style="text-align: right;">1.0000000</td>
+<td style="text-align: right;">-0.1367121</td>
+<td style="text-align: right;">-0.3818590</td>
+<td style="text-align: right;">0.3048657</td>
+<td style="text-align: right;">-0.5510241</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">transmission</td>
+<td style="text-align: right;">-0.1549412</td>
+<td style="text-align: right;">-0.1367121</td>
+<td style="text-align: right;">1.0000000</td>
+<td style="text-align: right;">-0.0655195</td>
+<td style="text-align: right;">-0.1678075</td>
+<td style="text-align: right;">-0.1332874</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">mileage</td>
+<td style="text-align: right;">-0.0641297</td>
+<td style="text-align: right;">-0.3818590</td>
+<td style="text-align: right;">-0.0655195</td>
+<td style="text-align: right;">1.0000000</td>
+<td style="text-align: right;">0.4411576</td>
+<td style="text-align: right;">0.6423262</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">fuelType</td>
+<td style="text-align: right;">0.2282952</td>
+<td style="text-align: right;">0.3048657</td>
+<td style="text-align: right;">-0.1678075</td>
+<td style="text-align: right;">0.4411576</td>
+<td style="text-align: right;">1.0000000</td>
+<td style="text-align: right;">0.3718314</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">age</td>
+<td style="text-align: right;">-0.0485343</td>
+<td style="text-align: right;">-0.5510241</td>
+<td style="text-align: right;">-0.1332874</td>
+<td style="text-align: right;">0.6423262</td>
+<td style="text-align: right;">0.3718314</td>
+<td style="text-align: right;">1.0000000</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
+<section id="results" class="level1">
+<h1>Results</h1>
+<section id="estimations" class="level2">
+<h2 class="anchored" data-anchor-id="estimations">Estimations</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>tidres1</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 2 × 5
+  term         estimate std.error statistic  p.value
+  &lt;chr&gt;           &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;    &lt;dbl&gt;
+1 (Intercept) 18226.    1323.         13.8  1.46e-16
+2 mileage        -0.108    0.0419     -2.58 1.38e- 2</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>glares1</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 1 × 12
+  r.squared adj.r.squared sigma statistic p.value    df logLik   AIC   BIC
+      &lt;dbl&gt;         &lt;dbl&gt; &lt;dbl&gt;     &lt;dbl&gt;   &lt;dbl&gt; &lt;dbl&gt;  &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;
+1     0.146         0.124 6085.      6.66  0.0138     1  -414.  835.  840.
+# ℹ 3 more variables: deviance &lt;dbl&gt;, df.residual &lt;int&gt;, nobs &lt;int&gt;</code></pre>
+</div>
+</div>
+</section>
+<section id="predictions" class="level2">
+<h2 class="anchored" data-anchor-id="predictions">Predictions</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>pred_1 </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>        1         2         3         4 
+18220.743 16593.372 15849.341  4122.125 </code></pre>
+</div>
+</div>
+<ul>
+<li>The first predicted value equal to 18220.743</li>
+<li>The second predicted value equal to 16593.372</li>
+</ul>
+</section>
+</section>
+<section id="inroduction" class="level1">
+<h1>Inroduction</h1>
+<p>We are going to take a look at a data analysis assignment.we are going to look at different factors and see how they affect the price of a car.</p>
+<p>According to <span class="citation" data-cites="knuth84">(<a href="#ref-knuth84" role="doc-biblioref">Knuth 1984</a>)</span></p>
+</section>
+<section id="data-1" class="level1">
+<h1>Data</h1>
+</section>
+<section id="results-1" class="level1">
+<h1>Results</h1>
+<section id="estimations-1" class="level2">
+<h2 class="anchored" data-anchor-id="estimations-1">Estimations</h2>
+</section>
+<section id="chapter-a" class="level2">
+<h2 class="anchored" data-anchor-id="chapter-a">Chapter A</h2>
 <p>We can separate them as b2 for age, b3 for model, b4 for transmission, b5 for mileage and b6 for fuel type. If we are describing b3 we can say that if b3 increases with one then b1(price) increases with 129,750 if everything else stays the same. We can describe the rest of the coefficient using the same method.</p>
 </section>
-<section id="chapter-b" class="level1">
-<h1>Chapter B</h1>
+<section id="chapter-b" class="level2">
+<h2 class="anchored" data-anchor-id="chapter-b">Chapter B</h2>
 <ol start="2" type="1">
 <li>Comapred to the model in task B we can se that the age of the car has more effect on the price this is probably caused by the fact that now we have many more variables that effect the scale of how each variable effects the price.¨</li>
 </ol>
 </section>
-<section id="chapter-c" class="level1">
-<h1>Chapter C</h1>
+<section id="chapter-c" class="level2">
+<h2 class="anchored" data-anchor-id="chapter-c">Chapter C</h2>
 <ol start="3" type="1">
 <li>The final model is more accurate because it contains multiple different values that effect the price of the car instead of just using age. Because as we know the price of the car is not just chosen by the age but many different factors and that’s why i think this is a better model.</li>
 </ol>
-<p>According to <span class="citation" data-cites="knuth84">(<a href="#ref-knuth84" role="doc-biblioref">Knuth 1984</a>)</span></p>
+</section>
+<section id="predictions-1" class="level2">
+<h2 class="anchored" data-anchor-id="predictions-1">Predictions</h2>
+</section>
 </section>
 <section id="conclusions" class="level1">
 <h1>Conclusions</h1>
-<p>We see that the final model is better suited for calculating the estimated price of the car. because it includes multiple different factors. # References</p>
+<p>We see that the final model is better suited for calculating the estimated price of the car. because it includes multiple different factors.</p>
+<p><strong>Number of words in the assignment is: 410</strong></p>
 </section>
 <section id="appendix" class="level1">
 <h1>Appendix</h1>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">include_graphics</span>(<span class="st">"images/model2.png"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div id="fig-mod1" class="quarto-figure quarto-figure-center quarto-float anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-mod1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="images/model2.png" class="img-fluid figure-img">
+<img src="images/model2.png" class="img-fluid figure-img" width="446">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-mod1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figure&nbsp;1: Model1
@@ -261,16 +453,12 @@ Figure&nbsp;1: Model1
 </div>
 </div>
 <p><a href="#fig-mod1" class="quarto-xref">Figure&nbsp;1</a> shows GRETL output …</p>
-</section>
-<section id="appendix-1" class="level1">
-<h1>Appendix</h1>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">include_graphics</span>(<span class="st">"images/model1.png"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div id="fig-mod2" class="quarto-figure quarto-figure-center quarto-float anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-mod2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="images/model1.png" class="img-fluid figure-img">
+<img src="images/model1.png" class="img-fluid figure-img" width="300">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-mod2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figure&nbsp;2: Model1
@@ -286,8 +474,14 @@ Figure&nbsp;2: Model1
 </section>
 
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
+<div id="ref-bjornar" class="csl-entry" role="listitem">
+Karlsen Kivedal, Bjornar. 2023. <span>“Anvendt Statistikk Og Okonometri”</span> 1 (212): 1–304. <a href="https://www.universitetsforlaget.no/avendt-statistikk-og-okonometri">https://www.universitetsforlaget.no/avendt-statistikk-og-okonometri</a>.
+</div>
 <div id="ref-knuth84" class="csl-entry" role="listitem">
 Knuth, Donald E. 1984. <span>“Literate Programming.”</span> <em>Comput. J.</em> 27 (2): 97–111. <a href="https://doi.org/10.1093/comjnl/27.2.97">https://doi.org/10.1093/comjnl/27.2.97</a>.
+</div>
+<div id="ref-wickham2023r" class="csl-entry" role="listitem">
+Wickham, Hadley, Mine Çetinkaya-Rundel, and Garrett Grolemund. 2023. <em>R for Data Science</em>. " O’Reilly Media, Inc.".
 </div>
 </div></section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -325,18 +519,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
     return false;
   }
-  const clipboard = new window.ClipboardJS('.code-copy-button', {
-    text: function(trigger) {
-      const codeEl = trigger.previousElementSibling.cloneNode(true);
-      for (const childEl of codeEl.children) {
-        if (isCodeAnnotation(childEl)) {
-          childEl.remove();
-        }
-      }
-      return codeEl.innerText;
-    }
-  });
-  clipboard.on('success', function(e) {
+  const onCopySuccess = function(e) {
     // button target
     const button = e.trigger;
     // don't keep focus
@@ -368,7 +551,47 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }, 1000);
     // clear code selection
     e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
   });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    // For code content inside modals, clipBoardJS needs to be initialized with a container option
+    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
   function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
     const config = {
       allowHTML: true,
@@ -403,7 +626,11 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       try { href = new URL(href).hash; } catch {}
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
-      return note.innerHTML;
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
     });
   }
   const xrefs = window.document.querySelectorAll('a.quarto-xref');
@@ -451,7 +678,12 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       if (window.Quarto?.typesetMath) {
         window.Quarto.typesetMath(note);
       }
-      return note.innerHTML;
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
     }
   }
   for (var i=0; i<xrefs.length; i++) {
