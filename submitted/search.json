@@ -1,16 +1,121 @@
 [
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Assignment 2",
-    "section": "",
-    "text": "This is a Quarto website.\nTo learn more about Quarto websites visit https://quarto.org/docs/websites.\n\n\n[1] \"R commands read into memory\"\n\n\n\nAttaching package: 'dplyr'\n\n\nThe following objects are masked from 'package:stats':\n\n    filter, lag\n\n\nThe following objects are masked from 'package:base':\n\n    intersect, setdiff, setequal, union\n\n\n\nIntroduction\nWe are going to take a look at a data analysis assignment.we are going to look at different factors and see how they affect the price of a car.\n\n\nChapter A\nWe can separate them as b2 for age, b3 for model, b4 for transmission, b5 for mileage and b6 for fuel type. If we are describing b3 we can say that if b3 increases with one then b1(price) increases with 129,750 if everything else stays the same. We can describe the rest of the coefficient using the same method.\n\n\nChapter B\n\nComapred to the model in task B we can se that the age of the car has more effect on the price this is probably caused by the fact that now we have many more variables that effect the scale of how each variable effects the price.¨\n\n\n\nChapter C\n\nThe final model is more accurate because it contains multiple different values that effect the price of the car instead of just using age. Because as we know the price of the car is not just chosen by the age but many different factors and that’s why i think this is a better model.\n\nAccording to (Knuth 1984)\n\n\nConclusions\nWe see that the final model is better suited for calculating the estimated price of the car. because it includes multiple different factors. # References\n\n\nAppendix\n\nknitr::include_graphics(\"images/model2.png\")\n\n\n\n\n\n\n\nFigure 1: Model1\n\n\n\n\n\nFigure 1 shows GRETL output …\n\n\nAppendix\n\nknitr::include_graphics(\"images/model1.png\")\n\n\n\n\n\n\n\nFigure 2: Model1\n\n\n\n\n\nFigure 1 shows GRETL output …\n\n\n\n\n\nReferences\n\nKnuth, Donald E. 1984. “Literate Programming.” Comput. J. 27 (2): 97–111. https://doi.org/10.1093/comjnl/27.2.97."
-  },
-  {
     "objectID": "assignment.html",
     "href": "assignment.html",
     "title": "Assignment 2",
     "section": "",
-    "text": "[1] \"R commands read into memory\"\n\n\n\nAttaching package: 'dplyr'\n\n\nThe following objects are masked from 'package:stats':\n\n    filter, lag\n\n\nThe following objects are masked from 'package:base':\n\n    intersect, setdiff, setequal, union\n\n\n\nIntroduction\nWe are going to take a look at a data analysis assignment.we are going to look at different factors and see how they affect the price of a car.\n\n\nChapter A\nWe can separate them as b2 for age, b3 for model, b4 for transmission, b5 for mileage and b6 for fuel type. If we are describing b3 we can say that if b3 increases with one then b1(price) increases with 129,750 if everything else stays the same. We can describe the rest of the coefficient using the same method.\n\n\nChapter B\n\nComapred to the model in task B we can se that the age of the car has more effect on the price this is probably caused by the fact that now we have many more variables that effect the scale of how each variable effects the price.¨\n\n\n\nChapter C\n\nThe final model is more accurate because it contains multiple different values that effect the price of the car instead of just using age. Because as we know the price of the car is not just chosen by the age but many different factors and that’s why i think this is a better model.\n\nAccording to (Knuth 1984)\n\n\nConclusions\nWe see that the final model is better suited for calculating the estimated price of the car. because it includes multiple different factors. # References\n\n\nAppendix\n\nknitr::include_graphics(\"images/model2.png\")\n\n\n\n\n\n\n\nFigure 1: Model1\n\n\n\n\n\nFigure 1 shows GRETL output …\n\n\nAppendix\n\nknitr::include_graphics(\"images/model1.png\")\n\n\n\n\n\n\n\nFigure 2: Model1\n\n\n\n\n\nFigure 1 shows GRETL output …\n\n\n\n\n\nReferences\n\nKnuth, Donald E. 1984. “Literate Programming.” Comput. J. 27 (2): 97–111. https://doi.org/10.1093/comjnl/27.2.97."
+    "text": "[1] \"R commands read into memory\""
+  },
+  {
+    "objectID": "assignment.html#estimations",
+    "href": "assignment.html#estimations",
+    "title": "Assignment 2",
+    "section": "Estimations",
+    "text": "Estimations\n\ntidres1\n\n# A tibble: 2 × 5\n  term         estimate std.error statistic  p.value\n  &lt;chr&gt;           &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;    &lt;dbl&gt;\n1 (Intercept) 18226.    1323.         13.8  1.46e-16\n2 mileage        -0.108    0.0419     -2.58 1.38e- 2\n\n\n\nglares1\n\n# A tibble: 1 × 12\n  r.squared adj.r.squared sigma statistic p.value    df logLik   AIC   BIC\n      &lt;dbl&gt;         &lt;dbl&gt; &lt;dbl&gt;     &lt;dbl&gt;   &lt;dbl&gt; &lt;dbl&gt;  &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;\n1     0.146         0.124 6085.      6.66  0.0138     1  -414.  835.  840.\n# ℹ 3 more variables: deviance &lt;dbl&gt;, df.residual &lt;int&gt;, nobs &lt;int&gt;"
+  },
+  {
+    "objectID": "assignment.html#predictions",
+    "href": "assignment.html#predictions",
+    "title": "Assignment 2",
+    "section": "Predictions",
+    "text": "Predictions\n\npred_1 \n\n        1         2         3         4 \n18220.743 16593.372 15849.341  4122.125 \n\n\n\nThe first predicted value equal to 18220.743\nThe second predicted value equal to 16593.372"
+  },
+  {
+    "objectID": "assignment.html#estimations-1",
+    "href": "assignment.html#estimations-1",
+    "title": "Assignment 2",
+    "section": "Estimations",
+    "text": "Estimations"
+  },
+  {
+    "objectID": "assignment.html#chapter-a",
+    "href": "assignment.html#chapter-a",
+    "title": "Assignment 2",
+    "section": "Chapter A",
+    "text": "Chapter A\nWe can separate them as b2 for age, b3 for model, b4 for transmission, b5 for mileage and b6 for fuel type. If we are describing b3 we can say that if b3 increases with one then b1(price) increases with 129,750 if everything else stays the same. We can describe the rest of the coefficient using the same method."
+  },
+  {
+    "objectID": "assignment.html#chapter-b",
+    "href": "assignment.html#chapter-b",
+    "title": "Assignment 2",
+    "section": "Chapter B",
+    "text": "Chapter B\n\nComapred to the model in task B we can se that the age of the car has more effect on the price this is probably caused by the fact that now we have many more variables that effect the scale of how each variable effects the price.¨"
+  },
+  {
+    "objectID": "assignment.html#chapter-c",
+    "href": "assignment.html#chapter-c",
+    "title": "Assignment 2",
+    "section": "Chapter C",
+    "text": "Chapter C\n\nThe final model is more accurate because it contains multiple different values that effect the price of the car instead of just using age. Because as we know the price of the car is not just chosen by the age but many different factors and that’s why i think this is a better model."
+  },
+  {
+    "objectID": "assignment.html#predictions-1",
+    "href": "assignment.html#predictions-1",
+    "title": "Assignment 2",
+    "section": "Predictions",
+    "text": "Predictions"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Assignment 2",
+    "section": "",
+    "text": "[1] \"R commands read into memory\""
+  },
+  {
+    "objectID": "index.html#estimations",
+    "href": "index.html#estimations",
+    "title": "Assignment 2",
+    "section": "Estimations",
+    "text": "Estimations\n\ntidres1\n\n# A tibble: 2 × 5\n  term         estimate std.error statistic  p.value\n  &lt;chr&gt;           &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;    &lt;dbl&gt;\n1 (Intercept) 18226.    1323.         13.8  1.46e-16\n2 mileage        -0.108    0.0419     -2.58 1.38e- 2\n\n\n\nglares1\n\n# A tibble: 1 × 12\n  r.squared adj.r.squared sigma statistic p.value    df logLik   AIC   BIC\n      &lt;dbl&gt;         &lt;dbl&gt; &lt;dbl&gt;     &lt;dbl&gt;   &lt;dbl&gt; &lt;dbl&gt;  &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;\n1     0.146         0.124 6085.      6.66  0.0138     1  -414.  835.  840.\n# ℹ 3 more variables: deviance &lt;dbl&gt;, df.residual &lt;int&gt;, nobs &lt;int&gt;"
+  },
+  {
+    "objectID": "index.html#predictions",
+    "href": "index.html#predictions",
+    "title": "Assignment 2",
+    "section": "Predictions",
+    "text": "Predictions\n\npred_1 \n\n        1         2         3         4 \n18220.743 16593.372 15849.341  4122.125 \n\n\n\nThe first predicted value equal to 18220.743\nThe second predicted value equal to 16593.372"
+  },
+  {
+    "objectID": "index.html#estimations-1",
+    "href": "index.html#estimations-1",
+    "title": "Assignment 2",
+    "section": "Estimations",
+    "text": "Estimations"
+  },
+  {
+    "objectID": "index.html#chapter-a",
+    "href": "index.html#chapter-a",
+    "title": "Assignment 2",
+    "section": "Chapter A",
+    "text": "Chapter A\nWe can separate them as b2 for age, b3 for model, b4 for transmission, b5 for mileage and b6 for fuel type. If we are describing b3 we can say that if b3 increases with one then b1(price) increases with 129,750 if everything else stays the same. We can describe the rest of the coefficient using the same method."
+  },
+  {
+    "objectID": "index.html#chapter-b",
+    "href": "index.html#chapter-b",
+    "title": "Assignment 2",
+    "section": "Chapter B",
+    "text": "Chapter B\n\nComapred to the model in task B we can se that the age of the car has more effect on the price this is probably caused by the fact that now we have many more variables that effect the scale of how each variable effects the price.¨"
+  },
+  {
+    "objectID": "index.html#chapter-c",
+    "href": "index.html#chapter-c",
+    "title": "Assignment 2",
+    "section": "Chapter C",
+    "text": "Chapter C\n\nThe final model is more accurate because it contains multiple different values that effect the price of the car instead of just using age. Because as we know the price of the car is not just chosen by the age but many different factors and that’s why i think this is a better model."
+  },
+  {
+    "objectID": "index.html#predictions-1",
+    "href": "index.html#predictions-1",
+    "title": "Assignment 2",
+    "section": "Predictions",
+    "text": "Predictions"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "About this site"
   }
 ]

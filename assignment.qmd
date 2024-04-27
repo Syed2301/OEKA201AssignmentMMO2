@@ -9,32 +9,88 @@ abstract: |
 
 ```{r, echo=F, messages=F, warnings=F}
 source('rscript.R')
+library(knitr)
 ```
 
 
-# Introduction
+# Adjust the output text below and insert at a appropriate place in the document below
+Would like to refer to [@wickham2023r] and [@bjornar]
+
+Model 1: One variable and linear
+$$`r ex1mod1la`$$
+
+Model 2: Two variables and non-linear
+$$`r ex2mod1la`$$
+
+# Data 
+
+summary statistics
+```{r}
+descsum 
+```
+
+correlation matrix
+```{r}
+kable(desccor)
+```
+
+# Results
+
+## Estimations
+
+```{r}
+tidres1
+```
+
+```{r}
+glares1
+```
+
+## Predictions
+
+```{r}
+pred_1 
+```
+
+- The first predicted value equal to `r paste(pred_1[1])`
+- The second predicted value equal to `r paste(pred_1[2])`
+
+
+
+
+
+
+# Inroduction
 We are going to take a look at a data analysis assignment.we are going to look at different factors and see how they affect the price of a car.
-
-# Chapter A
-We can separate them as b2 for age, b3 for model, b4 for transmission, b5 for mileage and b6 for fuel type. If we are describing b3 we can say that if b3 increases with one then b1(price) increases with 129,750 if everything else stays the same. We can describe the rest of the coefficient using the same method.
-
-# Chapter B
-2) Comapred to the model in task B we can se that the age of the car has more effect on the price this is probably caused by the fact that now we have many more variables that effect the scale of how each variable effects the price.¨
-
-# Chapter C
-3) The final model is more accurate because it contains multiple different values that effect the price of the car instead of just using age. Because as we know the price of the car is not just chosen by the age but many different factors and that’s why i think this is a better model.
-
 
 According to [@knuth84]
 
+# Data 
+
+# Results
+
+## Estimations
+
+## Chapter A
+We can separate them as b2 for age, b3 for model, b4 for transmission, b5 for mileage and b6 for fuel type. If we are describing b3 we can say that if b3 increases with one then b1(price) increases with 129,750 if everything else stays the same. We can describe the rest of the coefficient using the same method.
+
+## Chapter B
+2) Comapred to the model in task B we can se that the age of the car has more effect on the price this is probably caused by the fact that now we have many more variables that effect the scale of how each variable effects the price.¨
+
+## Chapter C
+3) The final model is more accurate because it contains multiple different values that effect the price of the car instead of just using age. Because as we know the price of the car is not just chosen by the age but many different factors and that’s why i think this is a better model.
+
+## Predictions
 
 # Conclusions
 We see that the final model is better suited for calculating the estimated price of the car. because it includes multiple different factors.
-# References
+
+**Number of words in the assignment is: `r OEKA201ProgrammingAssignmentNLAZ::cwordquarto()`**
 
 # Appendix
 
 ```{r}
+#| echo: false
 #| label: fig-mod1
 #| fig-cap: 'Model1'
 knitr::include_graphics("images/model2.png")
@@ -42,13 +98,14 @@ knitr::include_graphics("images/model2.png")
 
 @fig-mod1 shows GRETL output ...
 
-# Appendix
-
 ```{r}
+#| echo: false
 #| label: fig-mod2
 #| fig-cap: 'Model1'
 knitr::include_graphics("images/model1.png")
 ```
 
 @fig-mod1 shows GRETL output ...
+
+
 

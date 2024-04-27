@@ -2,7 +2,7 @@
 print('R commands read into memory')
 
 ###################################################################################################################
-library(dplyr)
+library(dplyr, warn.conflicts = FALSE)
 library(broom)
 ###################################################################################################################
 ## Assign dataset for exercise to variable usedvw
